@@ -30,6 +30,23 @@ form {
 .search-input:focus {
   outline: none;
 }
+.genres-container {
+  padding: 1rem;
+  display: flex;
+  max-width: 80%;
+  margin: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.genre-span {
+  cursor: pointer;
+  margin: 0.2rem;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 10rem;
+  user-select: none;
+  background-color: rgba(255, 248, 248, 0.164);
+}
 .movie-container {
   display: flex;
   justify-content: center;
@@ -51,24 +68,27 @@ form {
   object-fit: cover;
   border-radius: 3px 3px 0 0;
 }
+.movie-title p {
+  margin: 0;
+  padding: 0 0.5rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  width: 200px;
+  font-size: 1rem;
+  white-space: nowrap;
+}
 
 .movie-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
-}
-.movie-info p {
-  margin: 0;
+  font-size: 0.7rem;
 }
 .tag {
-  width: 1.5rem;
+  padding-right: 0.5rem;
   text-align: center;
-  background-color: #000000;
-  padding: 0.3rem;
-  border-radius: 5%;
   color: #f2f2f2;
-  font-weight: bold;
 }
 .tag.good {
   color: #4cbb17;
@@ -78,6 +98,12 @@ form {
 }
 .tag.bad {
   color: red;
+}
+.movie-genre {
+  padding: 0 0 0.5rem 0.5rem;
+  font-weight: 100;
+  color: #f1f1f1cb;
+  margin: 0%;
 }
 .movie-overview {
   position: absolute;
@@ -89,7 +115,7 @@ form {
   background-color: rgb(255, 255, 255);
   color: #151515;
   padding: 1rem;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 0.3s ease-in-out;
   max-height: 100%;
   overflow: auto;
